@@ -1,5 +1,5 @@
 {
-  "name": "webpack-uikit",
+  "name": "moscow-test",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:Lutsman/webpack-uikit.git",
@@ -12,10 +12,11 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
+    "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "select2": "^4.0.6-rc.1",
-    "uikit": "^3.0.0-rc.26"
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
