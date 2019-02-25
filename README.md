@@ -9,6 +9,5 @@ features:
 
 
 scripts:
-- dev - development with dev server
-- start - development build in dist folder
+- start - development
 - build - production

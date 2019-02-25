@@ -7,8 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack/webpack.config.prod.js  --colors",
-    "dev": "webpack-dev-server --open --config webpack/webpack.config.dev.js --colors",
-    "start": "webpack -w --config webpack/webpack.config.dev-build.js  --colors"
+    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js --colors"
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
