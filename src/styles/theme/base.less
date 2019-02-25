@@ -78,8 +78,19 @@ img {
   max-width: 100%;
 }
 
+.bg-black {
+  background-color: #000;
+}
+
 .section {
   padding: 60px 0;
+}
+
+.slick-slider {
+
+  img {
+    width: 100%;
+  }
 }
 
 .icon {
@@ -97,4 +108,44 @@ img {
 
 .slick-prev:before, .slick-next:before {
   color: @color-dark;
+}
+
+// Table responsive
+
+@media (max-width: 767px) {
+  .tm-table-responsive {
+    display: block;
+
+    tbody, th, td, tr {
+      display: block;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tr + tr {
+      margin-top: 10px;
+    }
+  }
+}
+
+.vote {
+  display: flex;
+  flex-direction: row-reverse;
+
+  i + i {
+    margin-right: 4px;
+  }
+
+  .fa-star-o:hover {
+
+    &::before {
+      content: "\f005";
+    }
+
+    ~ i::before {
+      content: "\f005";
+    }
+  }
 }
