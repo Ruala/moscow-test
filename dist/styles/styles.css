@@ -3249,6 +3249,15 @@ img {
 .header .main-menu {
   flex-wrap: wrap;
 }
+@media (max-width: 767px) {
+  .header .navbar-text {
+    width: 100%;
+    text-align: center;
+  }
+  .header .navbar-brand {
+    width: 150px;
+  }
+}
 .service-info {
   padding: 5px 10px;
   font-size: 14px;

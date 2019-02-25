@@ -1,4 +1,4 @@
-# webpack-uikit
+# webpack-bootstrap
 
 features:
 - Bootstrap through CDN v4.2.1
