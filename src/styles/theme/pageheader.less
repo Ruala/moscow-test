@@ -1,0 +1,19 @@
+.pageheader {
+  position: relative;
+  padding: 100px 0;
+  color: #fff;
+  background: url("../../images/bg-pageheader.jpg") no-repeat center top;
+  background-size: cover;
+  border-bottom: 3px solid @color-accent;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}

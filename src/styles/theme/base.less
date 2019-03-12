@@ -78,12 +78,30 @@ img {
   max-width: 100%;
 }
 
+.text-primary {
+  color: @color-accent !important;
+}
+
+.bg-primary {
+  background-color: @color-accent !important;
+}
+
 .bg-black {
   background-color: #000;
 }
 
 .section {
   padding: 60px 0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: @color-accent;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .slick-slider {
@@ -130,15 +148,33 @@ img {
   }
 }
 
+.bg-tyres {
+  position: relative;
+  background: url("../../images/bg-tyres.jpg") no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
 .vote {
   display: flex;
-  flex-direction: row-reverse;
+/*  flex-direction: row-reverse;*/
 
   i + i {
     margin-right: 4px;
   }
 
-  .fa-star-o:hover {
+  /*.fa-star-o:hover {
 
     &::before {
       content: "\f005";
@@ -147,5 +183,5 @@ img {
     ~ i::before {
       content: "\f005";
     }
-  }
+  }*/
 }
