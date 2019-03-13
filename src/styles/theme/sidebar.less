@@ -1,0 +1,56 @@
+.sidebar {
+  width: 100%;
+  max-width: 100%;
+}
+
+.sidebar-slider {
+  padding-bottom: 40px;
+
+  .slick-prev, .slick-next {
+    top: auto;
+    bottom: 0;
+    transform: none;
+    height: 30px;
+    width: 30px;
+
+    &::before {
+      font-size: 30px;
+      color: @color-accent;
+    }
+  }
+
+  .slick-prev {
+    left: 20px;
+  }
+
+  .slick-next {
+    right: auto;
+    left: 60px;
+  }
+
+  .card {
+    border-radius: 30px 0;
+  }
+
+  .card-header:first-child {
+    border-radius: 30px 0 0;
+  }
+
+  .card-footer:last-child {
+    border-radius: 0 0 30px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .sidebar {
+    width: 250px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .sidebar {
+    width: 300px;
+  }
+}

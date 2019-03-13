@@ -78,6 +78,14 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: @color-accent;
+
+  &:hover {
+    color: darken(@color-accent, 10%);
+  }
+}
+
 .text-primary {
   color: @color-accent !important;
 }
@@ -185,3 +193,90 @@ img {
     }
   }*/
 }
+
+.breadcrumb {
+  padding: .75rem 0;
+  background-color: transparent;
+}
+
+.js-toggle-nav {
+  position: relative;
+  overflow: hidden;
+
+  > li {
+    display: none;
+    width: 100%;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.btn-show-more {
+  font-weight: 700;
+  color: @color-accent;
+  cursor: pointer;
+
+  &:hover {
+    color: darken(@color-accent, 10%);
+  }
+
+  .hide-more {
+    display: none;
+  }
+
+  &.active {
+
+    .show-more {
+      display: none;
+    }
+
+    .hide-more {
+      display: block;
+    }
+  }
+}
+
+.submenu {
+  padding: 0;
+  list-style: none;
+
+  li {
+
+    a {
+      display: block;
+      position: relative;
+      padding: 8px 0 8px 20px;
+      color: @color-dark;
+
+      &::before {
+        content: "\f054";
+        display: block;
+        position: absolute;
+        top: 8px;
+        left: 0;
+        line-height: inherit;
+        font-family: FontAwesome;
+        color: @color-accent;
+      }
+
+      &:hover {
+        color: @color-accent;
+      }
+
+      &.active {
+        font-weight: 700;
+
+        &:hover {
+          color: @color-dark;
+        }
+      }
+    }
+  }
+}
+
+.card_accent {
+  border-color: @color-accent;
+}
+

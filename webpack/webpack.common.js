@@ -27,6 +27,12 @@ module.exports = {
         ]),
         new HtmlWebpackPlugin({
             template: Path.resolve(__dirname, '../src/index.html'),
+            filename: "index.html",
+            inject: "body",
+        }),
+        new HtmlWebpackPlugin({
+            template: Path.resolve(__dirname, '../src/inner.html'),
+            filename: "inner.html",
             inject: "body",
         }),
         new webpack.ProvidePlugin({

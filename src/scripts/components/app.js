@@ -52,6 +52,14 @@ $(document).ready(function () {
             $slider.slick();
 
         })();
+
+        //sidebar slider
+        (function () {
+            const $slider = $('.sidebar-slider');
+
+            $slider.slick();
+
+        })();
     })();
 
     /*Yandex map*/
@@ -159,6 +167,45 @@ $(document).ready(function () {
                 myMap.geoObjects.add(placemark);
             }
         }
+
+    })();
+
+    //Toggler
+    (function () {
+        const $targets = $('.js-toggle-nav');
+
+        $targets.each(function () {
+            const $target = $(this);
+            const activeClassName = 'active';
+            const $showMoreBtn = $target.siblings('.btn-show-more');
+            const $targetItems = $target.children();
+            const minCount = 10;
+
+            if ($targetItems.length < minCount) return;
+
+            $targetItems.each((index, item) => {
+                if (index > minCount) return;
+
+                $(item).addClass(activeClassName);
+            });
+            const targetStartHeight = $target.height() + 'px';
+            $targetItems.addClass(activeClassName);
+            const targetEndHeight = $target.height() + 'px';
+
+            $target.css({
+                height: targetStartHeight,
+            });
+            $showMoreBtn.show();
+
+            $showMoreBtn.on('click', clickBtnHandler);
+
+            function clickBtnHandler() {
+                $showMoreBtn.toggleClass(activeClassName);
+                $target.animate({
+                    height: $showMoreBtn.hasClass(activeClassName) ? targetEndHeight : targetStartHeight
+                }, 500);
+            }
+        });
 
     })();
 
