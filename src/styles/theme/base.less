@@ -84,6 +84,10 @@ a {
   &:hover {
     color: darken(@color-accent, 10%);
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .text-primary {
@@ -96,6 +100,22 @@ a {
 
 .bg-black {
   background-color: #000;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: @color-accent;
+  border-color: @color-accent;
+
+  &:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: darken(@color-accent, 10%);
+  }
+}
+
+.dropdown-toggle::after {
+  vertical-align: middle;
 }
 
 .section {
@@ -132,8 +152,11 @@ a {
   display: none;
 }
 
-.slick-prev:before, .slick-next:before {
-  color: @color-dark;
+.slick-prev, .slick-next {
+
+  &::before {
+    color: @color-dark;
+  }
 }
 
 // Table responsive
@@ -178,8 +201,12 @@ a {
   display: flex;
 /*  flex-direction: row-reverse;*/
 
-  i + i {
-    margin-right: 4px;
+  i {
+    line-height: 24px;
+
+    + i {
+      margin-left: 4px;
+    }
   }
 
   /*.fa-star-o:hover {
@@ -276,7 +303,32 @@ a {
   }
 }
 
+.card {
+
+  .table {
+    margin-bottom: 0;
+  }
+}
 .card_accent {
   border-color: @color-accent;
 }
 
+.subnav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin-right: 10px;
+
+    a {
+      display: block;
+      color: @color-dark;
+
+      &:hover {
+        color: @color-accent;
+      }
+    }
+  }
+}

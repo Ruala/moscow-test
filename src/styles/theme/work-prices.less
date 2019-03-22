@@ -1,0 +1,30 @@
+.work-prices {
+
+  .card {
+    border-color: #ddd;
+  }
+
+  .card-header {
+    position: relative;
+    padding-right: 40px;
+    background-color: transparent;
+    border-bottom-color: #ddd;
+
+    &::before {
+      content: "\f106";
+      font-family: FontAwesome;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+
+    &.collapsed {
+
+      &::before {
+        content: "\f107";
+      }
+    }
+  }
+}

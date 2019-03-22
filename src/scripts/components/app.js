@@ -60,6 +60,30 @@ $(document).ready(function () {
             $slider.slick();
 
         })();
+
+        //services slider
+        (function () {
+            const $slider = $('.services-slider');
+
+            $slider.slick({
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+
+        })();
     })();
 
     /*Yandex map*/
