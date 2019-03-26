@@ -1,0 +1,29 @@
+.article {
+
+  .h4 a {
+    color: inherit;
+
+    &:hover {
+      color: @color-accent;
+    }
+  }
+
+  .image-wrapper {
+    display: block;
+    overflow: hidden;
+    border: 1px solid @color-dark;
+
+    img {
+      transition: all 0.2s linear;
+    }
+
+    &:hover {
+      text-decoration: none;
+      border-color: @color-accent;
+
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
